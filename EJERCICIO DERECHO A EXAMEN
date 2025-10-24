@@ -1,0 +1,489 @@
+import java.util.Scanner;
+
+public class numeroonce {
+    public static void main(String[] args) {
+        Scanner val = new Scanner(System.in);
+	double num1=0, num2=0, num3=0, mayor=0, menor=0, prom=0;
+        System.out.print("Ingresa el primer valor: ");
+        num1 = val.nextDouble();
+
+        System.out.print("Ingresa el segundo valor: ");
+        num2 = val.nextDouble();
+
+        System.out.print("Ingresa el tercer valor: ");
+        num3 = val.nextDouble();
+
+        if (num1 == num2 && num2 == num3) {
+            System.out.println("Los tres números son iguales: " + num1);
+        } else {
+            if (num1 > num2 && num1 > num3) {
+                mayor = num1;
+            } else if (num2 > num1 && num2 > num3) {
+                mayor = num2;
+            } else {
+                mayor = num3;
+            }
+            if (num1 < num2 && num1 < num3) {
+                menor = num1;
+            } else if (num2 < num1 && num2 < num3) {
+                menor = num2;
+            } else {
+                menor = num3;
+            }
+
+          	prom = (num1 + num2 + num3) / 3;
+
+            System.out.println("El número mayor es: " + mayor);
+            System.out.println("El número menor es: " + menor);
+            System.out.println("El promedio es: " + prom);
+        }
+
+    }
+}
+
+import java.util.Scanner;
+
+public class numerotrece {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingresa el valor de A: ");
+        double a = entrada.nextDouble();
+
+        System.out.print("Ingresa el valor de B: ");
+        double b = entrada.nextDouble();
+
+        System.out.print("Ingresa el valor de C: ");
+        double c = entrada.nextDouble();
+
+        if (a == 0) {
+            System.out.println("Error: La ecuación no es cuadrática");
+        } else {
+            double discriminante = (b * b) - (4 * a * c);
+
+            if (discriminante < 0) {
+                System.out.println("Error: Las raíces son imaginarias");
+            } else {
+                double x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+double x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                System.out.println("Las raíces reales son:");
+                System.out.println("x1 = " + x1);
+                System.out.println("x2 = " + x2);
+            }
+        }
+
+        entrada.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class numerodoce{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+	double total=0, sueldo=0;
+	int opcion=0,horas=0;
+	System.out.print("¿Cuantas horas trabajas? ");
+	horas=sc.nextInt();
+  System.out.print("¿A que categoría perteneces? ");
+	opcion=sc.nextInt();
+ 	switch (opcion) {
+	case 1:
+		total=20000*.928;
+		System.out.print("Tu sueldo del mes con el descuento del 7.2% por concepto de salud es de " + total);
+		break;
+	case 2:
+		total=15000*.928;
+		System.out.print("Tu sueldo del mes con el descuento del 7.2% por concepto de salud es de " + total);
+   		break;
+	case 3:
+		total=10000*.928;
+		System.out.println("Tu sueldo del mes con el descuento del 7.2% por concepto de salud es de " + total);
+		break;
+	case 4:
+		total=7500*.928;
+		sueldo=total*1.15;
+		System.out.println("Tu sueldo del mes con el descuento del 7.2% por concepto de salud es de " + total);
+		System.out.println("El sueldo con el subsidio del 15% es de " + sueldo);
+		break;
+	default:
+		System.out.print("Ingresa un valor del 1-4");
+        }
+
+    }
+}
+import java.util.*;
+public class numerocatocer{
+	public static void main (String args[]){
+	Scanner sc = new Scanner(System.in);
+	int opcion=0;
+	double n=0, in=0;
+	System.out.println("Si el vendedor vendió igual o menos de 10,000,000 ponga 1\nSi el vendedor vendió mas de 10 y menos de 15 millones ponga 2\nSi el vendedor vendió mas de 15 millones ponga 3 ");
+		System.out.println("Elija la de cuanto vendió en el mes para darle su información");
+	opcion = sc.nextInt();
+		switch (opcion) {
+	case 1:
+		System.out.println("Introduzca cuanto fue la cantidad que vendio");
+		n = sc.nextDouble();
+		if (n<10000000){
+		in=n*1.02;
+		System.out.println("Su ingreso neto es: "+in);
+			}else{ System.out.println(" Introduzca una cantidad valida");
+			}
+		break;
+	case 2:
+		System.out.println("Introduzca cuanto fue la cantidad que vendio porfavor");
+		n = sc.nextDouble();
+		if (n>=10000000 && n<15000000 ){
+		in=n*1.04;
+		System.out.println("Su ingreso neto es: "+in);
+			}else{ System.out.println(" Introduzca una cantidad valida");
+			}
+		break;
+	case 3:
+		System.out.println("Introduzca cuanto fue la cantidad que vendio:");
+		n = sc.nextDouble();
+		if (n>=15000000){
+		in=n*1.10;
+		System.out.println("Su ingreso neto es: "+in);
+			}else{ System.out.println(" Introduzca una cantidad valida");
+			}
+		break;
+ 	default:
+		System.out.println("Por favor elija correctamente segun lo vendido");
+		break;
+		}
+	}
+	
+}
+
+import java.util.*;
+public class numerodieciseis{
+	public static void main (String args[]){
+	 Scanner sc = new Scanner(System.in);
+	 int n=0, a=0;
+	 System.out.println("Introduzca un numero");
+	 n = sc.nextInt();
+	  if(n%2==0){
+	   System.out.println("Su numero es par");
+	   }else{
+	   System.out.println("Su numero es impar");
+
+	}
+	
+	}
+}
+import java.util.Scanner;
+	public class numerocinco{
+	public static void main(String arg[]){
+	Scanner jl = new Scanner (System.in);
+	double tem=0,fa=0,ab=0;
+	System.out.print("Coloca la temperatura de gardos centigrados que deseas convertir a fahrenheit y a temperatura absoluta");
+	tem=jl.nextDouble();
+	fa=tem*1.8+32;
+	ab=tem+273.15;
+	System.out.print("Esta es tu temperatura en fahrenheit " + fa + "y esto es la temperatura absoluta" + ab);
+
+
+
+
+}
+}
+import java.util.Scanner;
+	class numerocautro{
+	public static void main(String arg[]){
+	Scanner jl = new Scanner(System.in);
+	double ac=0,pasa=0,f=0;
+	System.out.print("Escribe el año en que naciste ");
+	pasa=jl.nextDouble();
+	System.out.print("Escribe el año actual");
+	ac=jl.nextDouble();
+	f=ac-pasa;
+	System.out.print("Esta es tu edad actualmente" + f);
+	
+
+
+
+
+
+
+}
+}
+import java.util.Scanner;
+	public class numerodos{
+	public static void main (String args[]){
+	Scanner jl = new Scanner (System.in);
+	double r=0,li=3.1416,a=0,p=0,aa=0,pp=0;
+	System.out.print("Escribe el radio de el circulo que deseas saber su longitus y su area ");
+	r=jl.nextDouble();
+	a=(r*2);
+	p=(2*li);
+	aa=li*a;
+	pp=p*r;
+	System.out.print("Gracias al radio el area de el circulo es " + aa + "\n y su perimetro es " + pp);
+	
+	
+
+
+
+}
+}
+import java.util.Scanner;
+	public class numeroseis{
+	public static void main(String arg[]){
+	Scanner jl=new Scanner(System.in);
+	double gru=0,h=0,m=0,ph=0,pm=0;
+	System.out.print("Escriba cuantos alumnos hay en el grupo");
+	gru=jl.nextDouble();
+	System.out.print("Escribe cuantos hombre hay en el grupo");
+	h=jl.nextDouble();
+	System.out.print("Escribe cauntas mujeres hay en el grupo");
+	m=jl.nextDouble();
+	ph=h/gru*100;
+	pm=m/gru*100;
+	System.out.print("el promedio del grupo de " + gru + "personas  en hombres es  " + ph + "% y el de las mujerdes es "+ pm + "%");
+
+
+
+
+
+}
+}
+import java.util.Scanner;
+	public class numerotres{
+	public static void main(String arg[]){
+	Scanner jl = new Scanner(System.in);
+	double e=0,pu=0;
+	System.out.print("Deseas calcular el numero de pulsasiones que debes tener en diez segundos de ejercicio solo coloca tu edad ");
+	e=jl.nextDouble();
+	pu=(220-e)/10;
+	System.out.print("Este es el numero de pulsasiones que deberias tener " + pu);
+
+
+
+
+}
+}
+import java.util.Scanner;
+public class numerouno{
+	public static void main (String arg[]){
+	Scanner jl = new Scanner(System.in);
+	double m=0,p=0,pul=0;
+	System.out.print("Escribe los metros que de seas converti a pies y a pulgadas ");
+	m = jl.nextDouble();
+	p=m*3.281;
+	pul=m*39.37;
+	System.out.print("Este es la conversion de a pies " + p + "\n y a pulgadas " + pul);
+	
+
+
+
+
+}
+
+
+}
+import java.util.Scanner;
+	public class numerosiete{
+	public static void main(String arg[]){
+	Scanner jl = new Scanner(System.in);
+	double t=0,p=15,l=0,k=0;
+	System.out.print("Coloca la cantidad que vas a pagar para darte tu descuento");
+	t=jl.nextDouble();
+	l= (p*t)/100;
+	k=t-l;
+	System.out.print("Este es tu precio final de la compra que realizaste" + k);
+}
+}
+import java.util.Scanner;
+	public class Numeroocho{
+	public static void main(String arg[]){
+	Scanner jl = new Scanner(System.in);
+	double i=0,p=0,pp=0;
+	System.out.print("Cuanta capital deseas invertir en la empresa");
+	i=jl.nextDouble();
+	p=(i*2)/100;
+	pp=i-p;
+	System.out.print("Tu ingreso mensual de tu inversión de " + i + "al mes con 	el 2% es" + p);
+
+
+
+}
+}
+import java.util.Scanner;
+	public class numeronueve{
+	public static void main(String arg[]){
+	Scanner jl= new Scanner(System.in);
+	double s=0,ss=0,sss=0;
+	System.out.print("Ingresa el salario actual");
+	s=jl.nextDouble();
+	ss=(s*25)/100;
+	sss=s+ss;
+	System.out.print("Este es el nuevo salario " + sss);
+
+
+
+
+
+
+}
+}
+import java.util.Scanner;
+	public class numerodiesinueve{
+	public static void main(String arg[]){
+	Scanner jl= new Scanner(System.in);
+	double n=0,g=40,t=30,p=30,r=0,rr=0,rrr=0;
+	System.out.print("Coloca el presupuesto anual del hospital ");
+	n= jl.nextDouble();
+	r=(t*n)/100;
+	rr=(p*n)/100;
+	rrr=(g*n)/100;
+	System.out.print("Estos son los presupuesto ya repartidos\n " + r + "pesos a traumologia\n" + rr + "pesos a Pediatra \n" + rrr + "pesos Ginecologia");
+
+	
+	
+
+
+
+
+
+
+
+}
+}
+
+import java.util.Scanner;
+
+class Numeroveinte {
+    public static void main(String[] args) {
+        Scanner jl = new Scanner(System.in);
+        double nn=0,n=0,d=0,dd=0;
+	System.out.print("PON EL NUMERO TOTAL DE TUS COMPRAS ");
+	nn = jl.nextDouble();
+        System.out.print("ESCOGE UN NUMERO AL AZAR ");
+        n = jl.nextDouble();
+
+        if (n <= 74) {
+            d= (nn*15)/100;
+		dd=nn-d;
+	 System.out.println("El costo final de tu compra es" + dd);
+        } else {
+            d= (nn*20)/100;
+		dd=nn-d;
+
+        }
+
+        System.out.println("El costo final de tu compra es" + dd);
+    }
+}
+
+
+
+
+
+
+
+
+import java.util.Scanner;
+	public class numerodiesinueve{
+	public static void main(String arg[]){
+	Scanner jl= new Scanner(System.in);
+	double n=0,g=40,t=30,p=30,r=0,rr=0,rrr=0;
+	System.out.print("Coloca el presupuesto anual del hospital ");
+	n= jl.nextDouble();
+	r=(t*n)/100;
+	rr=(p*n)/100;
+	rrr=(g*n)/100;
+	System.out.print("Estos son los presupuesto ya repartidos\n " + r + "pesos a traumologia\n" + rr + "pesos a Pediatra \n" + rrr + "pesos Ginecologia");
+
+	
+	
+
+
+
+
+
+
+
+}
+}
+import java.util.Scanner;
+
+class NumeroDieciochoo {
+    public static void main(String[] args) {
+        Scanner jl = new Scanner(System.in);
+        double minutos, costoTotal;
+
+        System.out.print("Coloca los minutos que durará tu llamada: ");
+        minutos = jl.nextDouble();
+
+        if (minutos <= 3) {
+            costoTotal = 10;
+        } else {
+            costoTotal = 10 + (minutos - 3) * 1;
+        }
+
+        System.out.println("El costo total de tu llamada es: $" + costoTotal);
+    }
+}
+import java.util.*;
+public class nuemroquince{
+	public static void main (String args[]){
+	Scanner sc = new Scanner(System.in);
+	int opcion=0;
+	double a=0;
+	System.out.println("Introduzca la calificación del alumno");
+	a = sc.nextDouble();
+	if(a<1.1){
+		System.out.println("Su nota es: P  (Pésimo)");
+	  }else if(a>1 && a<2.1){ 
+		System.out.println("Su nota es: M  (Mal) ");
+	    }else if(a>2 && a<3){ 
+		System.out.println("Su nota es: R (Regular) ");
+		}else if(a>2.9 && a<4.1){ 		
+		System.out.println("Su nota es: B (Bien)");
+		  }else if(a>4 && a<5.1){
+		System.out.println("Su nota es: E (Excelente)");
+	
+	}
+}
+}
+
+
+		
+
+
+
+
+import java.util.*;
+public class numerodiecisiete{
+	public static void main (String args[]){
+	 Scanner sc = new Scanner(System.in);
+	 System.out.println("Introduzca un numero");
+ 	 int n = sc.nextInt();
+	  if(n!=1){
+		if(Math.sqrt(n)==1){
+		 System.out.println("Es primo");
+		}else{ 
+		System.out.println("No es primo");
+
+		}
+	}
+
+}
+}
+import java.util.*;
+public class numerodiez {
+	public static void main(String args[]){	
+	Scanner sc = new Scanner(System.in);
+	double a=0, b=0, c=0, d=0;
+ 	System.out.println("La calificación de Matematicas");
+	a= sc.nextInt();
+	System.out.println("La calificación de Fisica");
+	b= sc.nextInt();
+	System.out.println("La calificación de Quimica");
+	c= sc.nextInt();
+	d=(a+b+c)/3;
+	System.out.println("Su promedio será: " +d);
+}
+}
